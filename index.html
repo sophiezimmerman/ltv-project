@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AeroFlex Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #00203FFF;
+            color: #ADEFD1FF;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero {
+            background-image: url('https://example.com/drone.jpg'); /* Replace with actual drone image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+        .feature {
+            background-color: #f8f8f8;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+        }
+        .feature h3 {
+            color: #00203FFF;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00203FFF;
+            color: #ADEFD1FF;
+        }
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .contact h3 {
+            color: #00203FFF;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #00203FFF;
+            color: #ADEFD1FF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #025A73;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>AeroFlex Systems</h1>
+        <p>Modular Drones for Military and Commercial Use</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Customizable Drones for Every Mission</h2>
+        <p>No-Tool Assembly | Rapid Field Deployment | On-Site 3D Printing</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h3>Tool-Free Assembly</h3>
+            <p>Our no-tool design enables quick assembly and repair in the field.</p>
+        </div>
+        <div class="feature">
+            <h3>Modular Design</h3>
+            <p>Interchangeable components allow for easy customization based on mission needs.</p>
+        </div>
+        <div class="feature">
+            <h3>Field-Deployable 3D Printing</h3>
+            <p>Manufacture drone parts on-site, reducing downtime and logistics delays.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <p>Interested in learning more about AeroFlex Systems? Reach out to us.</p>
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AeroFlex Systems. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
