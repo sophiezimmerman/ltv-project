@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AeroFlex Tech - AeroFlex Systems</title>
+    <!-- Importing Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111111; /* Deep Black Background */
+            color: #EAEAEA; /* Light Gray Text */
+            overflow-y: scroll; /* Force scrollbar to prevent layout shift */
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #000000; /* Black background for menu */
+            padding: 0 40px; /* Use padding to create space inside the nav */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box; /* Ensure padding is included in width calculations */
+            height: 80px; /* Set consistent height */
+            width: 100%; /* Ensure the nav bar takes full width */
+        }
+
+        nav img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-grow: 1;
+        }
+
+        nav ul li {
+            margin: 0 40px; /* Consistent spacing between menu items */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFC300; /* Yellow hover color */
+        }
+
+        /* Active Menu Item Styling */
+        .active {
+            color: #FFC300; /* Highlighted menu item */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #111111; /* Matching dark background */
+            color: #F4F4F4; /* Light Gray for readability */
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Flex Container for Sections */
+        .section-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between sections */
+            padding: 50px 20px;
+        }
+
+        /* Individual Section Layout */
+        .section {
+            width: 300px; /* Fixed width for each section */
+        }
+
+        .section-title {
+            text-align: center;
+            color: #F4F4F4;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        /* Grid inside each section */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns per section */
+            gap: 10px;
+            justify-items: center;
+        }
+
+        .grid-item {
+            background-color: #292929;
+            width: 130px;
+            height: 130px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Light-up colors for each section */
+        .lit-up-sensors { background-color: #FFC300; color: #111111; } /* Yellow for Sensors */
+        .lit-up-battery { background-color: #40E0D0; color: #111111; } /* Turquoise for Battery Sizes */
+        .lit-up-payloads { background-color: #FFB400; color: #111111; } /* Gold for Payloads */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111111;
+            color: #F4F4F4;
+        }
+
+        a {
+            color: #40E0D0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #FFC300;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu with Logo linking to Homepage -->
+    <nav>
+        <a href="index.html"><img src="logo.png" alt="AeroFlex Logo"></a> <!-- Logo as a link to the homepage -->
+        <ul>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="tech.html" class="active">AeroFlex Tech</a></li> <!-- AeroFlex Tech is highlighted -->
+            <li><a href="usecases.html">Use Cases</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#newsroom">Newsroom</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Advanced Technology Behind AeroFlex Drones</h2>
+        <p>Learn how our cutting-edge drone systems are designed to provide unmatched flexibility, performance, and efficiency across industries.</p>
+    </section>
+
+    <!-- Sections in a Flexbox Container -->
+    <div class="section-container">
+
+        <!-- Sensors Section -->
+        <div class="section">
+            <h2 class="section-title">Sensors</h2>
+            <section class="grid-section">
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-sensors')">Radar</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-sensors')">Lidar</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-sensors')">Infrared Camera</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-sensors')">Optical Camera</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-sensors')">Thermal Camera</div>
+            </section>
+        </div>
+
+        <!-- Battery Sizes Section -->
+        <div class="section">
+            <h2 class="section-title">Battery Sizes</h2>
+            <section class="grid-section">
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-battery')">Small</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-battery')">Medium</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-battery')">Large</div>
+            </section>
+        </div>
+
+        <!-- Payloads Section -->
+        <div class="section">
+            <h2 class="section-title">Payloads</h2>
+            <section class="grid-section">
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-payloads')">Delivery Box</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-payloads')">Medical Kit</div>
+                <div class="grid-item" onclick="toggleLight(this, 'lit-up-payloads')">Agricultural Sprayer</div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AeroFlex Systems. All rights reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    </footer>
+
+    <!-- JavaScript to Toggle Different Light-Up Colors -->
+    <script>
+        function toggleLight(element, litUpClass) {
+            element.classList.toggle(litUpClass);
+        }
+    </script>
+
+</body>
+</html>
